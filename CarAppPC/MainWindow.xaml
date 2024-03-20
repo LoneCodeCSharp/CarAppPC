@@ -1,0 +1,73 @@
+﻿<Window x:Class="CarAppPC.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CarAppPC"
+        xmlns:uc="clr-namespace:CarAppPC.UserControls"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="650" Width="1024" WindowStartupLocation="CenterScreen" WindowStyle="None" AllowsTransparency="True" Background="Transparent">
+    <Border Height="650" Width="1024" CornerRadius="30">
+    <Border.Background>
+        <RadialGradientBrush GradientOrigin="0,0">
+            <GradientStop Color="#FF1C1D21" Offset="1"/>
+                <GradientStop Color="#0984d1" Offset="0.13"/>
+        </RadialGradientBrush>
+    </Border.Background>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="160"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Border CornerRadius="30 30 0 30" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" Background="#252525"/>
+            <Border CornerRadius="30 0 0 30" Grid.Column="0" Grid.Row="0" Grid.RowSpan="2" Background="#252525">
+           
+                    <StackPanel Margin="0 0 0 0">
+                    <Image Source="Img/tl.png" Width="150" Height="150" />
+                    <Border x:Name="carbtn" MouseLeftButtonDown="carbtn_MouseLeftButtonDown" Height="50" Margin="0 50 0 0">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="5"/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                            <Border x:Name="carbg" Grid.Column="0" Background="#0984d1"/>
+                            <Border x:Name="carbord" Grid.Column="1" Background="#0984d1" Opacity="0.5"/>
+                            <TextBlock Grid.Column="1" FontFamily="{StaticResource textStyle}" Foreground="White" FontSize="20" Text="Car" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                        </Grid>
+                    </Border>
+                    <Border x:Name="battarybtn" MouseLeftButtonDown="battarybtn_MouseLeftButtonDown" Height="50" Margin="0 10 0 0">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="5"/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                            <Border x:Name="batbg" Grid.Column="0" Background="Gray"/>
+                            <Border x:Name="batbord" Grid.Column="1" Background="#545454" Opacity="0.5"/>
+                            <TextBlock Grid.Column="1" FontFamily="{StaticResource textStyle}" Foreground="White" FontSize="20" Text="Charging" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                        </Grid>
+                    </Border>
+                    <Border x:Name="climatebtn" MouseLeftButtonDown="climatebtn_MouseLeftButtonDown" Height="50" Margin="0 10 0 0">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="5"/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                            <Border x:Name="clbg" Grid.Column="0" Background="Gray" />
+                            <Border x:Name="clbord" Grid.Column="1" Background="#545454" Opacity="0.5"/>
+                            <TextBlock Grid.Column="1" FontFamily="{StaticResource textStyle}" Foreground="White" FontSize="20" Text="Climate" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                        </Grid>
+                    </Border>
+                </StackPanel>
+                </Border>
+            <Grid Grid.Row="1" Grid.Column="1">
+                <uc:CarControl Visibility="Visible" x:Name="carcontrol"/>
+                <uc:ChargingControl Visibility="Hidden" x:Name="battarycontrol"/>
+                <uc:ClimateControl Visibility="Hidden" x:Name="climatecontrol"/>
+            </Grid>
+        </Grid>
+    </Border>
+</Window>

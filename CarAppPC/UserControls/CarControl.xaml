@@ -1,0 +1,177 @@
+﻿<UserControl x:Class="CarAppPC.UserControls.CarControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:CarAppPC.UserControls"
+             mc:Ignorable="d" 
+             d:DesignHeight="610" d:DesignWidth="954">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="200"/>
+        </Grid.RowDefinitions>
+        <Image VerticalAlignment="Center" HorizontalAlignment="Center" Source="Img/tes.png" Width="500" Margin="0 0 0 50 " />
+        <TextBlock Grid.Row="1" Text="Controls" FontFamily="{StaticResource textStyle}" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" FontSize="25" />
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="200"/>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Border Grid.Row="1" Grid.Column="0" Width="150" Height="80" CornerRadius="15" Background="#0984d1">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition Width="55"/>
+                        </Grid.ColumnDefinitions>
+                        <StackPanel Orientation="Vertical" VerticalAlignment="Center" Margin="10 0 0 0">
+                            <TextBlock Text="Doors" Foreground="White" FontSize="20" FontWeight="DemiBold" />
+                            <TextBlock Text="Open"  Foreground="White" FontSize="13" Margin="0 5 0 0"/>
+                        </StackPanel>
+                        <Border Grid.Column="1" Background="White" x:Name="gradientBorder" Height="60" Width="30" CornerRadius="15" />
+                        <Border Grid.Column="1" x:Name="btn1" Background="#0984d1"  CornerRadius="17" Width="20" Height="20" Margin="0,0,0,30"/>
+
+                    </Grid>
+                </Border>
+                <Border Grid.Row="0" Grid.Column="0" Width="150" Height="80" CornerRadius="15" Background="#191a1e">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition Width="55"/>
+                        </Grid.ColumnDefinitions>
+                        <StackPanel Orientation="Vertical" VerticalAlignment="Center" Margin="10 0 0 0">
+                            <TextBlock Text="Trunk" Foreground="White" FontSize="20" FontWeight="DemiBold" />
+                            <TextBlock Text="Closed"  Foreground="White" FontSize="13" Margin="0 5 0 0"/>
+                        </StackPanel>
+                        <Border Grid.Column="1" Background="White" x:Name="gradientBorder2" Height="60" Width="30" CornerRadius="15" />
+                        <Border Grid.Column="1" x:Name="btn2" Background="#191a1e"  CornerRadius="17" Width="20" Height="20" Margin="0,30,0,0"/>
+
+                    </Grid>
+                </Border>
+                <Border Grid.Row="0" Grid.Column="1" Width="150" Height="80" CornerRadius="15" Background="#0984d1">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition Width="55"/>
+                        </Grid.ColumnDefinitions>
+                        <StackPanel Orientation="Vertical" VerticalAlignment="Center" Margin="10 0 0 0">
+                            <TextBlock Text="Charging" Foreground="White" FontSize="20" FontWeight="DemiBold" />
+                            <TextBlock Text="Open"  Foreground="White" FontSize="13" Margin="0 5 0 0"/>
+                        </StackPanel>
+                        <Border Grid.Column="1" Background="White" x:Name="gradientBorder3" Height="60" Width="30" CornerRadius="15" />
+                        <Border Grid.Column="1" x:Name="btn3" Background="#0984d1"  CornerRadius="17" Width="20" Height="20" Margin="0,0,0,30"/>
+
+                    </Grid>
+                </Border>
+                <Border Grid.Row="1" Grid.Column="1" Width="150" Height="80" CornerRadius="15" Background="#191a1e">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition Width="55"/>
+                        </Grid.ColumnDefinitions>
+                        <StackPanel Orientation="Vertical" VerticalAlignment="Center" Margin="10 0 0 0">
+                            <TextBlock Text="Hood" Foreground="White" FontSize="20" FontWeight="DemiBold" />
+                            <TextBlock Text="Closed"  Foreground="White" FontSize="13" Margin="0 5 0 0"/>
+                        </StackPanel>
+                        <Border Grid.Column="1" Background="White" x:Name="gradientBorder4" Height="60" Width="30" CornerRadius="15" />
+                        <Border Grid.Column="1" x:Name="btn4" Background="#191a1e"  CornerRadius="17" Width="20" Height="20" Margin="0,30,0,0"/>
+
+                    </Grid>
+                </Border>
+            </Grid>
+            <Grid Grid.Column="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Border Grid.Row="1" Grid.Column="0" Width="150" Height="80" CornerRadius="15" Background="#0984d1">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition Width="55"/>
+                        </Grid.ColumnDefinitions>
+                        <StackPanel Orientation="Vertical" VerticalAlignment="Center" Margin="10 0 0 0">
+                            <TextBlock Text="Low beam" Foreground="White" FontSize="14" FontWeight="DemiBold" />
+                            <TextBlock Text="ON"  Foreground="White" FontSize="13" Margin="0 5 0 0"/>
+                        </StackPanel>
+                        <Border Grid.Column="1" Background="White" x:Name="gradientBorder5" Height="60" Width="30" CornerRadius="15" />
+                        <Border Grid.Column="1" x:Name="btn5" Background="#0984d1"  CornerRadius="17" Width="20" Height="20" Margin="0,0,0,30"/>
+
+                    </Grid>
+                </Border>
+                <Border Grid.Row="0" Grid.Column="0" Width="150" Height="80" CornerRadius="15" Background="#191a1e">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition Width="50"/>
+                        </Grid.ColumnDefinitions>
+                        <StackPanel Orientation="Vertical" VerticalAlignment="Center" Margin="10 0 0 0">
+                            <TextBlock Text="Parking lights	" Foreground="White" FontSize="14" FontWeight="DemiBold" />
+                            <TextBlock Text="OFF"  Foreground="White" FontSize="13" Margin="0 5 0 0"/>
+                        </StackPanel>
+                        <Border Grid.Column="1" Background="White" x:Name="gradientBorder6" Height="60" Width="30" CornerRadius="15" />
+                        <Border Grid.Column="1" x:Name="btn6" Background="#191a1e"  CornerRadius="17" Width="20" Height="20" Margin="0,30,0,0"/>
+
+                    </Grid>
+                </Border>
+                <Border Grid.Row="0" Grid.Column="1" Width="150" Height="80" CornerRadius="15" Background="#0984d1">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition Width="55"/>
+                        </Grid.ColumnDefinitions>
+                        <StackPanel Orientation="Vertical" VerticalAlignment="Center" Margin="10 0 0 0">
+                            <TextBlock Text="Fog lights" Foreground="White" FontSize="14" FontWeight="DemiBold" />
+                            <TextBlock Text="ON"  Foreground="White" FontSize="13" Margin="0 5 0 0"/>
+                        </StackPanel>
+                        <Border Grid.Column="1" Background="White" x:Name="gradientBorder7" Height="60" Width="30" CornerRadius="15" />
+                        <Border Grid.Column="1" x:Name="btn7" Background="#0984d1"  CornerRadius="17" Width="20" Height="20" Margin="0,0,0,30"/>
+
+                    </Grid>
+                </Border>
+                <Border Grid.Row="1" Grid.Column="1" Width="150" Height="80" CornerRadius="15" Background="#191a1e">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition Width="55"/>
+                        </Grid.ColumnDefinitions>
+                        <StackPanel Orientation="Vertical" VerticalAlignment="Center" Margin="10 0 0 0">
+                            <TextBlock Text="High beam" Foreground="White" FontSize="14" FontWeight="DemiBold" />
+                            <TextBlock Text="OFF"  Foreground="White" FontSize="13" Margin="0 5 0 0"/>
+                        </StackPanel>
+                        <Border Grid.Column="1" Background="White" x:Name="gradientBorder8" Height="60" Width="30" CornerRadius="15" />
+                        <Border Grid.Column="1" x:Name="btn8" Background="#191a1e"  CornerRadius="17" Width="20" Height="20" Margin="0,30,0,0"/>
+
+                    </Grid>
+                </Border>
+            </Grid>
+            <Border Grid.Column="2" Width="180" Height="180" CornerRadius="90" Background="#191a1e">
+                <Border Grid.Column="2" Width="160" Height="160" CornerRadius="90" Background="#0984d1">
+                    <Border Grid.Column="2" Width="140" Height="140" CornerRadius="70" Background="#191a1e">
+                        <StackPanel Orientation="Vertical" >
+                            <Border VerticalAlignment="Center" HorizontalAlignment="Center" Height="10" Width="30" CornerRadius="3" Background="#0984d1" Margin="0 20 0 0"/>
+                            <TextBlock Text="ENGINE" HorizontalAlignment="Center" Foreground="White" FontSize="17" Margin="10"/>
+                            <TextBlock Text="START" HorizontalAlignment="Center" Foreground="White" FontSize="20" Margin="0 -15 0 0"/>
+                            <TextBlock Text="STOP" HorizontalAlignment="Center" Foreground="White" FontSize="20"  Margin="0 -5 0 0"/>
+                        </StackPanel>
+                    </Border>
+                </Border>
+            </Border>
+        </Grid>
+    </Grid>
+</UserControl>
